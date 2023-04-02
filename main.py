@@ -49,9 +49,9 @@ import re
 import os
 
 
-API_ID = 14560088
-API_HASH = "74a2665339484da3eaaed5f4fe16da79"
-BOT_TOKEN = "5027731817:AAEdVdwm2ljYDaGqDJc8iOv-iWkwqerrTGs"
+API_ID = 10577960
+API_HASH = "80fd047285f4e94ca80311928b6bb5da"
+BOT_TOKEN = "6201665794:AAHaQvRXJuRDGXCPBM6mGq8L79iULzqfuuc"
 bot = Client(
     "bot",
     bot_token=BOT_TOKEN,
@@ -59,7 +59,7 @@ bot = Client(
     api_hash=API_HASH
 )
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nBot made by BATMAN")
 
@@ -76,7 +76,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["link"])& ~filters.edited)
+@bot.on_message(filters.command(["link"]))
 async def upload(bot: Client, m: Message):
     editable = await m.reply_text('Send link in **Name&link** format to download')
     input9: Message = await bot.listen(editable.chat.id)
@@ -216,7 +216,7 @@ async def upload(bot: Client, m: Message):
         await m.reply_text(e)
 
 
-@bot.on_message(filters.command(["pyro"])& ~filters.edited)
+@bot.on_message(filters.command(["pyro"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send txt file**")
     input: Message = await bot.listen(editable.chat.id)
