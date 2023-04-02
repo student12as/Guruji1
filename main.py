@@ -92,7 +92,7 @@ async def upload(bot: Client, m: Message):
     
     cc = f'>> **Name :** {name}'
     
-    path =f'./downloads/{update.from_user.id}'
+    path = f"./downloads/"
 
     if "youtu" in url:
         if raw_text2 in ["144", "240", "480"]:
@@ -222,8 +222,8 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
-
-    path=f'./downloads/{update.from_user.id}'
+    path = f"./downloads/"
+    
 
     try:    
         with open(x, "r") as f:
