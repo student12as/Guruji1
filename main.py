@@ -92,7 +92,7 @@ async def upload(bot: Client, m: Message):
     
     cc = f'>> **Name :** {name}'
     
-    path = f"./downloads/{m.chat.id}"
+    path =f'./downloads/{update.from_user.id}'
 
     if "youtu" in url:
         if raw_text2 in ["144", "240", "480"]:
