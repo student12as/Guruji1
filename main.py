@@ -61,7 +61,7 @@ async def restart_handler(_, m):
 @bot.on_message(filters.command(["pro_txt"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT in **NAME : LINK** format to download')
-    input: Message = await bot.listen(editable.chat.id)
+    input: Message = await bot.listen(m.chat.id)
     x = await input.download()
     await input.delete(True)
 
