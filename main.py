@@ -90,7 +90,7 @@ async def cancel(_, m):
 
     return
 
-@bot.on_message(filters.command("restart")&   (filters.chat(sudo_groups)))
+@bot.on_message(filters.command("restart")& 
 
 async def restart_handler(_, m):
 
@@ -98,7 +98,7 @@ async def restart_handler(_, m):
 
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["pyro"])&   (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["pyro"])&   
 
 async def account_login(bot: Client, m: Message):
 
@@ -692,7 +692,7 @@ async def account_login(bot: Client, m: Message):
 
     
 
-@bot.on_message(filters.command(["top"])&   (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["top"])&   
 
 async def account_login(bot: Client, m: Message):
 
@@ -1050,7 +1050,7 @@ async def adda_pdf(bot: Client, m: Message):
 
     
 
-@bot.on_message(filters.command(["jw"])&   (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["jw"])&   
 
 async def account_login(bot: Client, m: Message):
 
