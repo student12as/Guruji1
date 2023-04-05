@@ -72,13 +72,9 @@ API_HASH="80fd047285f4e94ca80311928b6bb5da"
 
 BOT_TOKEN= "6123256683:AAFiU815NR0aoptAFBfF1SnjExsIFFVFXvw"
 
-@bot.on_message(filters.command(["start"])&  (filters.chat(sudo_groups)))
-
 async def account_login(bot: Client, m: Message):
 
-    
-
-    editable = await m.reply_text("Hi\nPress /pyro")
+        editable = await m.reply_text("Hi\nPress /pyro")
 
 @bot.on_message(filters.command(["cancel"])&  (filters.chat(sudo_groups)))
 
