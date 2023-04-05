@@ -37,8 +37,8 @@ import os
 #     bot_token=bot_token)
 
 
-API_ID= 14560088
 
+API_ID= 14560088
 API_HASH "74a2665339484da3eaaed5f4fe16da79" 
 BOT_TOKEN= "6123256683:AAFiU815NR0aoptAFBfF1SnjExsIFFVFXvw"
 
