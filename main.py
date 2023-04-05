@@ -76,7 +76,7 @@ async def account_login(bot: Client, m: Message):
 
         editable = await m.reply_text("Hi\nPress /pyro")
 
-@bot.on_message(filters.command(["cancel"])&  (filters.chat(sudo_groups)))
+
 
 async def cancel(_, m):
 
