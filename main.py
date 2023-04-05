@@ -74,7 +74,7 @@ BOT_TOKEN= "6123256683:AAFiU815NR0aoptAFBfF1SnjExsIFFVFXvw"
 
 @bot.on_message(filters.command(["start"])&
                 
-
+async def account_login(bot: Client, m: Message):
 
         editable = await m.reply_text("Hi\nPress /pyro")
 
