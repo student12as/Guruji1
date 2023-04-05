@@ -66,11 +66,21 @@ import os
 
 #     bot_token=bot_token)
 
-API_ID= 10577960
+API_ID = 14560088
+API_HASH = "74a2665339484da3eaaed5f4fe16da79"
+BOT_TOKEN = "5027731817:AAEdVdwm2ljYDaGqDJc8iOv-iWkwqerrTGs"
+bot = Client(
+    "bot",
+    bot_token=BOT_TOKEN,
+    api_id=API_ID,
+    api_hash=API_HASH
+)
 
-API_HASH="80fd047285f4e94ca80311928b6bb5da" 
+@bot.on_message(filters.command(["start"])& ~filters.edited)
+async def account_login(bot: Client, m: Message):
+    editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nBot made by BATMAN")
 
-BOT_TOKEN= "6123256683:AAFiU815NR0aoptAFBfF1SnjExsIFFVFXvw"
+@bot.on_message(filters.command(["cancel"]))
 
 async def cancel(_, m):
 
