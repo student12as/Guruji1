@@ -63,7 +63,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT in **NAME : LINK** format to download')
     input: Message = await bot.listen(m.chat.id)
     x = await input.download()
-    await input.delete(True)
+    await input.delete(False)
 
 
     path = f"./downloads/{m.chat.id}"
@@ -459,7 +459,7 @@ async def account_login(bot: Client, m: Message):
 @bot.on_message(filters.command(["pro_vision"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello Bruh **I am vision ias Downloader Bot**. ")
-    input: Message = await bot.listen(editable.chat.id)
+    input: Message = await bot.listen(m.chat.id)
     x = await input.download()
     await input.delete(True)
 
