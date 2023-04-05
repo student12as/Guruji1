@@ -36,15 +36,9 @@ import os
 #     api_hash=api_hash,
 #     bot_token=bot_token)
 
-
-
-API_ID= 14560088
-API_HASH "" 
+API_ID= 10577960
+API_HASH "80fd047285f4e94ca80311928b6bb5da" 
 BOT_TOKEN= "6123256683:AAFiU815NR0aoptAFBfF1SnjExsIFFVFXvw"
-
-
-
-
 
 auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS").split(",") if chat != '']
 sudo_users = auth_users
