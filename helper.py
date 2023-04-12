@@ -30,7 +30,7 @@ import time
 from p_bar import progress_bar
 import aiohttp
 import tgcrypto
-import aiofiles
+
 from pyrogram.types import Message
 from pyrogram import Client, filters
 
