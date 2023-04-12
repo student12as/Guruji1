@@ -47,7 +47,7 @@ sudo_users = auth_users
 
 
 
-    int(chat) for chat in os.environ.get("GROUPS").split(",") if chat != '']
+
 @bot.on_message(filters.command(["pyro"]))
 async def account_login(bot: Client, m: Message):
 
