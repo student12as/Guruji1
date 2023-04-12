@@ -241,3 +241,18 @@ async def account_login(bot: Client, m: Message):
         #await m.reply_document(f"{nam2}.txt")
         await input3.delete(True)
         await m.reply_text("**Now Press /cpd to Download **")
+        except Exception as e:
+
+    # #                 await m.reply_text(f'**Video downloading failed\nor not a valid video link** ❌\n**Name :** {res_name}\n\n**Link :** ```{res_link}```\n\n{e}')
+
+    # #                 continue
+
+    # #                 time.sleep(1)
+
+    except Exception as e:   
+
+        await m.reply_text(f'{e}')     
+
+    await m.reply_text('Done')   
+
+bot.run()
