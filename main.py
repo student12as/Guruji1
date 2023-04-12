@@ -42,7 +42,7 @@ import logging
 import time
 import aiohttp
 import asyncio
-import aiofiles
+
 from pyrogram.types import User, Message
 import sys
 import re
