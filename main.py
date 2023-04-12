@@ -27,15 +27,25 @@ import re
 import os
 import io
 
+API_ID = int(os.environ.get("API_ID"))
 
+API_HASH = os.environ.get("API_HASH")
 
-auth_users = [
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-    int(chat) for chat in os.environ.get("AUTH_USERS").split(",") if chat != '']
+NAME = os.environ.get("NAME")
+
+bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
+with bot:
+
+    BOT = bot.get_me().username.lower()
+
+auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS").split(",") if chat != '']
 
 sudo_users = auth_users
 
-sudo_groups = [
+
 
     int(chat) for chat in os.environ.get("GROUPS").split(",") if chat != '']
 @bot.on_message(filters.command(["pyro"]))
