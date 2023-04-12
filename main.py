@@ -27,25 +27,7 @@ import re
 import os
 import io
 
-API_ID = ""
-API_HASH = ""
-BOT_TOKEN = ""
-AUTH_USERS = ""
-sudo_users = []
 
-bot = Client(
-    "bot",
-    bot_token=BOT_TOKEN,
-    api_id=API_ID,
-    api_hash=API_HASH
-)
-bot = Client("bot",
-
-             bot_token=os.environ.get("BOT_TOKEN"),
-
-             api_id=int(os.environ.get("API_ID")),
-
-             api_hash=os.environ.get("API_HASH"))
 
 auth_users = [
 
