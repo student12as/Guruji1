@@ -44,7 +44,7 @@ import logging
 import os
 import sys
 import re
-import cloudscraper
+
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
