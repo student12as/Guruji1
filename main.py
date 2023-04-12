@@ -27,26 +27,28 @@ import re
 import os
 import io
 
-API_ID = int(os.environ.get("API_ID"))
+API_ID = 10577960
+API_HASH = "80fd047285f4e94ca80311928b6bb5da"
+BOT_TOKEN = "6209295583:AAHFIQrlh-780M-bTNfnQzN0Z7qR8m21LKU"
+AUTH_USERS = 5593532344
+sudo_users = [5593532344]
+bot = Client(
+    "bot",
+    bot_token=BOT_TOKEN,
+    api_id=API_ID,
+    api_hash=API_HASH
+)
+async def exec(cmd):
+  proc = await asyncio.create_subprocess_exec(*cmd,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE)
+  stdout, stderr = await proc.communicate()
+  print(stdout.decode())
+  return proc.returncode,stderr.decode()
 
-API_HASH = os.environ.get("API_HASH")
-
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-
-NAME = os.environ.get("NAME")
-
-bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-
-with bot:
-
-    BOT = bot.get_me().username.lower()
-
-auth_users = [ int(chat) for chat in os.environ.get("AUTH_USERS").split(",") if chat != '']
-
-sudo_users = auth_users
-
-
-
+@bot.on_message(filters.command(["start"]))
+async def account_login(bot: Client, m: Message):
+ editable = await m.reply_text("**Hi BOSS I'm Alive Send /start To Alive **")
 
 @bot.on_message(filters.command(["pyro"]))
 async def account_login(bot: Client, m: Message):
