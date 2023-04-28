@@ -52,7 +52,7 @@ bot = Client(
 )
 
 
-bot = Client("bot",
+bot = Client("bot")
 
 keyboard = InlineKeyboardMarkup(
     [
