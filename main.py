@@ -29,7 +29,27 @@ import os
 import io
 #import pycurl
 
+API_ID = 24250238
 
+API_HASH = "cb3f118ce5553dc140127647edcf3720"
+
+BOT_TOKEN = "5900432090:AAF2LQTDAdZhfJP_05MjayOmWfuVpeyIdh8"
+
+AUTH_USERS = 6175650047
+
+sudo_users = [6175650047]
+
+bot = Client(
+
+    "bot",
+
+    bot_token=BOT_TOKEN,
+
+    api_id=API_ID,
+
+    api_hash=API_HASH
+
+)
 
 
 bot = Client("bot",
