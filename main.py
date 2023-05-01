@@ -53,9 +53,9 @@ from dotenv import load_dotenv
 load_dotenv()
 os.makedirs("./downloads", exist_ok=True)
 #put dealis here directly is case of any issue
-#API_ID = 14560088
-#API_HASH = "74a2665339484da3eaaed5f4fe16da79"
-#BOT_TOKEN = "5524381543:AAH-s7TDhvA_Ng2k9U5z9pvgiRPy5ChNve8"
+#API_ID = 22274213
+#API_HASH = "53db38b5012cc9323a39c72b266855d3"
+#BOT_TOKEN = "5900432090:AAF2LQTDAdZhfJP_05MjayOmWfuVpeyIdh8"
 #NAME = "BlackOuT"
 #API_ID = os.getenv('API_ID')
 #API_HASH = os.getenv('API_HASH')
