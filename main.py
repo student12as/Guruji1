@@ -233,41 +233,8 @@ async def upload(bot: Client, m: Message):
 @bot.on_message(filters.command(["pyro"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password**")
-    url = "https://elearn.crwilladmin.com/api/v1/login-other"
-    data = {
-        "deviceType": "android",
-        "password": "",
-        "deviceIMEI": "08750aa91d7389ab",
-        "deviceModel": "Realme RMX2001",
-        "deviceVersion": "",
-        "email": "",
-        "deviceToken": ""
-       }
-    headers = {
-        "Host": "elearn.crwilladmin.com",
-        "Content-Type": "application/json; charset=UTF-8",
-        "Content-Length": "338",
-        "Accept-Encoding": "gzip",
-        "user-agent": "okhttp/3.12.12"
-       }
-    input1: Message = await bot.listen(editable.chat.id)
-    raw_text = input1.text
-    data["email"] = raw_text.split("*")[0]
-    data["password"] = raw_text.split("*")[1]
-    await input1.delete(True)
-
-    scraper = cloudscraper.create_scraper()
-    html = scraper.post(url,data,headers).content
-    output0 = json.loads(html)
-    token = output0["data"]["token"]
-    #await m.reply_text(soup)
-    #token=str(input())
-    await editable.edit("**login Successful**")
-    editable = await m.reply_text("Send txt file**")
-    input: Message = await bot.listen(editable.chat.id)
-    x = await input.download()
-    await input.delete(True)
-
+    
+    
     path = f"./downloads/"
 
     try:    
