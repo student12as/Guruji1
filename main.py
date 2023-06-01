@@ -247,7 +247,7 @@ async def account_login(bot: Client, m: Message):
         os.remove(x)
         # print(len(links))
     except:
-        await m.reply_text("wait.")
+        await m.reply_text
         
         return
 
